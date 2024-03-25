@@ -19,3 +19,31 @@
 .nav-link:focus {
   color: #747bff;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+li {
+  padding-right: 15px;
+  padding-top: 25px;
+}
+
+
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form button {
+  display: block;
+}

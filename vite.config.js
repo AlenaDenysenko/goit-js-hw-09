@@ -11,9 +11,11 @@ export default defineConfig(({ command }) => {
     root: 'src',
     build: {
       sourcemap: true,
-
       rollupOptions: {
-        input: glob.sync('./src/*.html'),
+        input: glob.sync('./src/*.html').reduce((acc, filepath) => {
+          acc[filepath.replace(/^\.\/src\//, '').replace(/\.html$/, '')] = filepath;
+          return acc;
+        }, {}),
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {

@@ -1,0 +1,14 @@
+.feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feedback-form button {
+    display: block;
+}
